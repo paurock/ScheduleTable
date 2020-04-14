@@ -1,0 +1,74 @@
+ /* 
+      {cell.map((it, i) => (
+        <input
+          key={i}
+          name={it.name}
+          type="text"
+          onFocus={e => {
+            e.target.select();
+          }}
+          onBlur={() => writeDB(whatHourObj, whatHourName)}
+          onChange={e => {
+            const inputText = e.target.value;
+            handleChange(e, it.id, whatHourObj, whatHourName, inputText);
+          }}
+          value={it.name}
+        />
+      ))}
+
+
+
+/*          doc.data()["secondHour"] &&
+            setSecondHour(Object.values(doc.data()["secondHour"]));
+
+          doc.data()["thirdHour"] &&
+            setThirdHour(Object.values(doc.data()["thirdHour"]));
+
+          doc.data()["fourthHour"] &&
+            setFourthHour(Object.values(doc.data()["fourthHour"]));
+
+          doc.data()["fifthHour"] &&
+            setFifthHour(Object.values(doc.data()["fifthHour"]));
+
+          doc.data()["sixthHour"] &&
+            setSixthHour(Object.values(doc.data()["sixthHour"]));
+
+          doc.data()["seventhHour"] &&
+            setSeventhHour(Object.values(doc.data()["seventhHour"]));
+
+          doc.data()["eighthHour"] &&
+            setEighthHour(Object.values(doc.data()["eighthHour"])); */
+
+// setDataFB("secondHour", "Hello2");
+// setDataFB("thirdHour", "Hello3");
+// setDataFB("fourthHour", "Hello4");
+// setDataFB("fifthHour", "Hello5");
+// setDataFB("sixthHour", "Hello6");
+// setDataFB("seventhHour", "Hello7");
+// setDataFB("eighthHour", "Hello8");
+
+// doc.data()["secondHour"] && setSecondHour([doc.data()["secondHour"]]);
+// doc.data()["thirdHour"] && setThirdHour([doc.data()["thirdHour"]]);
+// doc.data()["fourthHour"] && setFourthHour([doc.data()["fourthHour"]]);
+// doc.data()["fifthHour"] && setFifthHour([doc.data()["fifthHour"]]);
+// doc.data()["sixthHour"] && setSixthHour([doc.data()["sixthHour"]]);
+// doc.data()["seventhHour"] &&
+// setSeventhHour([doc.data()["seventhHour"]]);
+// doc.data()["eighthHour"] && setEighthHour([doc.data()["eighthHour"]]);
+
+export const setDataFB = (key, name1, name2, name3, name4, name5) =>
+  db
+    .collection("data")
+    .doc("219")
+    .set(
+      {
+        [key]: {
+          0: [{ name: name1, id: "5" }],
+          1: [{ name: name2, id: "6" }],
+          2: [{ name: name3, id: "7" }],
+          3: [{ name: name4, id: "8" }],
+          4: [{ name: name5, id: "9" }]
+        }
+      },
+      { merge: true }
+    );

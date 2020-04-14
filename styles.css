@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+table {
+  border: 1px solid lightgray;
+  width: 90%;
+  min-width: 300px;
+  max-width: 1200px;
+  border-collapse: collapse;
+}
+table td,
+th {
+  border: 1px solid lightgray;
+  padding: 5px;
+  text-align: left;
+  min-height: 25px;
+}
+table th {
+  text-align: center;
+}

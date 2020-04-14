@@ -1,2 +1,0 @@
-# ScheduleTable
-Created with CodeSandbox
